@@ -1,0 +1,24 @@
+<div class="content">
+  <ul>
+    <ng-container
+      *ngTemplateOutlet="menuTpl; context: { $implicit: MAIN_ROUTES }"
+    ></ng-container>
+    <ng-template #menuTpl let-menus>
+      <ng-container *ngFor="let menu of menus">
+        <li
+          [ngClass]="{ active: menu.activated }"
+          (click)="onNavItemClick(menu)"
+        >
+          <div class="d-flex flex-dir-row gap-16">
+            <span>{{ menu.title }}</span>
+          </div>
+        </li>
+        <ul *ngIf="menu.children && menu.opened" class="children">
+          <ng-container
+            *ngTemplateOutlet="menuTpl; context: { $implicit: menu.children }"
+          ></ng-container>
+        </ul>
+      </ng-container>
+    </ng-template>
+  </ul>
+</div>

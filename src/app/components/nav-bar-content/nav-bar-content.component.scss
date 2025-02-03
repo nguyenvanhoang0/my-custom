@@ -1,0 +1,48 @@
+.content {
+  margin-top: 40px;
+  min-height: 40vh;
+  height: 100%;
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+
+      &:hover,
+      &.router-link-active {
+        background: #cae9ff;
+        transition: 0.2s ease-in-out;
+      }
+
+      .d-flex {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      &.active {
+        color: #1890ff;
+        background-color: #e6f7ff;
+        border-right: #1890ff 3px solid;
+      }
+    }
+
+    .children {
+      li {
+        padding-left: 40px;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      display: block;
+    }
+  }
+}
