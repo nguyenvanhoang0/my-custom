@@ -1,21 +1,35 @@
 import { Component } from '@angular/core';
 import { IRoute, MAIN_ROUTES } from '../../core/types/routes.types';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-nav-bar-content',
   templateUrl: './nav-bar-content.component.html',
   styleUrl: './nav-bar-content.component.scss',
+  animations: [
+    trigger('expandCollapse', [
+      state(
+        'closed',
+        style({ clipPath: 'inset(0 0 100% 0)', opacity: 0, height: '0px' })
+      ),
+      state('open', style({ clipPath: 'inset(0 0 0 0)', opacity: 1 })),
+      transition('closed <=> open', animate('200ms ease-in-out')),
+    ]),
+  ],
 })
 export class NavBarContentComponent {
   protected readonly MAIN_ROUTES = MAIN_ROUTES;
 
   router = '';
-  constructor(
-    private routerService: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private routerService: Router) {}
 
   ngOnInit() {
     this.routerService.events

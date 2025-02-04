@@ -13,7 +13,11 @@
             <span>{{ menu.title }}</span>
           </div>
         </li>
-        <ul *ngIf="menu.children && menu.opened" class="children">
+        <ul
+          *ngIf="menu.children"
+          [@expandCollapse]="menu.opened ? 'open' : 'closed'"
+          class="children"
+        >
           <ng-container
             *ngTemplateOutlet="menuTpl; context: { $implicit: menu.children }"
           ></ng-container>
