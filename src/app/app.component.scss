@@ -1,11 +1,35 @@
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
 .body {
   display: flex;
+  // position: absolute;
 
   nav {
-    background: #f8f9fa;
     width: 16%;
     height: 100vh;
-    // overflow-y: auto;
-    // position: fixed;
+    overflow-y: auto;
+    position: fixed;
+    border-right: 1px solid #f0f0f0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:hover {
+      &::-webkit-scrollbar {
+        display: block;
+      }
+    }
+  }
+
+  .content {
+    margin-left: 16%;
+    width: 100%;
+    padding: 20px;
   }
 }

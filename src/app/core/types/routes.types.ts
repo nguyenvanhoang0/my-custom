@@ -1,9 +1,11 @@
 // import { IconNameTypes } from '../../shared/components/icon/icon.types';
 
+import { IconName } from '../../shared/components/icon/icon.type';
+
 export const MAIN_ROUTES: IRoute[] = [
   {
     title: 'Core',
-    icon: 'tags',
+    icon: 'home',
     route: '/core',
     children: [
       {
@@ -16,11 +18,32 @@ export const MAIN_ROUTES: IRoute[] = [
         icon: 'tag',
         route: '/core/interceptors',
       },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
     ],
   },
+
   {
     title: 'todo',
-    icon: 'calendar',
+    icon: 'bell',
     route: 'todo',
   },
 ];
@@ -28,7 +51,7 @@ export const MAIN_ROUTES: IRoute[] = [
 export type IRoute = {
   route?: string;
   title: string;
-  icon?: string;
+  icon?: IconName;
   children?: IRoute[];
   level?: number;
   opened?: boolean;

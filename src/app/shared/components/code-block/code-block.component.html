@@ -1,0 +1,8 @@
+<div class="code-container" [ngClass]="label ? 'label' : ''">
+  <div class="code-header" *ngIf="label">
+    <span>{{ language.toUpperCase() }}</span>
+  </div>
+  <app-icon (click)="copyToClipboard()" icon="copy" class="copy"></app-icon>
+
+  <pre><code [highlight]="code" [language]="language"></code></pre>
+</div>

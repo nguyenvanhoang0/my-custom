@@ -24,11 +24,13 @@ import {
       transition('closed <=> open', animate('200ms ease-in-out')),
     ]),
   ],
+  standalone: false,
 })
 export class NavBarContentComponent {
   protected readonly MAIN_ROUTES = MAIN_ROUTES;
 
   router = '';
+
   constructor(private routerService: Router) {}
 
   ngOnInit() {
@@ -36,22 +38,16 @@ export class NavBarContentComponent {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         this.router = this.routerService.url;
-        console.log('router', this.router);
-
         this.updateActiveRoutes(this.MAIN_ROUTES);
       });
 
     this.router = this.routerService.url;
-    console.log(this.router);
-
     this.updateActiveRoutes(this.MAIN_ROUTES);
   }
 
   updateActiveRoutes(routes: IRoute[]) {
     routes.forEach((route) => {
       route.activated = route.route === this.router;
-      console.log(route.route === this.router);
-
       if (route.children) {
         this.updateActiveRoutes(route.children);
       }

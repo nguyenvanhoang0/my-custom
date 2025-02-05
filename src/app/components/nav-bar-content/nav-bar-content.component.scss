@@ -2,11 +2,13 @@
   margin-top: 40px;
   min-height: 40vh;
   height: 100%;
+
   ul {
     li {
       display: flex;
       align-items: center;
-      padding: 12px 40px;
+      justify-content: space-between;
+      padding: 12px 20px 12px 40px;
       cursor: pointer;
       position: relative;
       transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -20,6 +22,14 @@
         display: flex;
         align-items: center;
         gap: 16px;
+      }
+
+      .icon {
+        transition: transform 0.2s ease-in-out;
+
+        &.rotated {
+          transform: rotate(90deg);
+        }
       }
 
       &.active {
@@ -45,29 +55,9 @@
     }
 
     .children {
-      // display: block;
-      // opacity: 0;
-      // height: 0;
-      // overflow: hidden;
-      // transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
       li {
         padding-left: 60px;
       }
-
-      // &.opened {
-      //   height: auto;
-      //   opacity: 1;
-      // }
-    }
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &:hover {
-    &::-webkit-scrollbar {
-      display: block;
     }
   }
 }

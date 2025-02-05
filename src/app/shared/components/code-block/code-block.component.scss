@@ -1,0 +1,25 @@
+.code-container {
+  background-color: #22272e;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  position: relative;
+
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copy {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    // z-index: 20;
+  }
+
+  &.label {
+    padding: 24px;
+  }
+}

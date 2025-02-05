@@ -10,8 +10,15 @@
           (click)="onNavItemClick(menu)"
         >
           <div class="d-flex flex-dir-row gap-16">
+            <app-icon [icon]="menu.icon"></app-icon>
             <span>{{ menu.title }}</span>
           </div>
+          <app-icon
+            *ngIf="menu.children"
+            class="icon"
+            [ngClass]="menu.opened ? 'rotated' : ''"
+            [icon]="'chevronRight'"
+          ></app-icon>
         </li>
         <ul
           *ngIf="menu.children"
