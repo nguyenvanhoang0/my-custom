@@ -8,7 +8,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 20px 12px 40px;
+      padding: 12px 20px 12px 48px;
       cursor: pointer;
       position: relative;
       transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -54,10 +54,20 @@
       }
     }
 
-    .children {
+    @mixin nested-padding($level: 1, $base-padding: 64px, $increment: 16px) {
       li {
-        padding-left: 60px;
+        padding-left: calc(#{$base-padding} + #{$increment} * ($level - 1));
       }
+
+      .children {
+        @if $level < 10 {
+          @include nested-padding($level + 1, $base-padding, $increment);
+        }
+      }
+    }
+
+    .children {
+      @include nested-padding();
     }
   }
 }

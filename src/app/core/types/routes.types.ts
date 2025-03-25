@@ -12,6 +12,20 @@ export const MAIN_ROUTES: IRoute[] = [
         title: 'Guard ',
         icon: 'tag',
         route: '/core/guard',
+        children: [
+          {
+            title: 'interceptors ',
+            icon: 'tag',
+            route: '/core/interceptors',
+            children: [
+              {
+                title: 'interceptors ',
+                icon: 'tag',
+                route: '/core/interceptors',
+              },
+            ],
+          },
+        ],
       },
       {
         title: 'Interceptors ',

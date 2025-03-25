@@ -8,6 +8,7 @@ import { CodeBlockComponent } from '../../shared/components/code-block/code-bloc
 import { GuardComponent } from './components/guard/guard.component';
 import { InterceptorsComponent } from './components/interceptors/interceptors.component';
 import { SharedModule } from '../../shared/shared.module';
+import { ContentBlockComponent } from '../../shared/components/content-block/content-block.component';
 
 @NgModule({
   declarations: [CoreFunctionComponent, GuardComponent, InterceptorsComponent],
@@ -17,6 +18,7 @@ import { SharedModule } from '../../shared/shared.module';
     CoreFunctionRoutingModule,
     SharedModule,
     CodeBlockComponent,
+    ContentBlockComponent,
   ],
 })
 export class CoreFunctionModule {}
