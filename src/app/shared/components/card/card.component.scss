@@ -1,0 +1,28 @@
+.card {
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 16px;
+
+    p {
+      margin-bottom: 8px;
+      color: rgb(80, 80, 80);
+    }
+
+    .title {
+      font-size: 22px;
+      color: black;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014,
+      0 9px 28px 8px #0000000d;
+  }
+}

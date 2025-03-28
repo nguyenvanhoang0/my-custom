@@ -11,6 +11,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'components',
+    loadChildren: () =>
+      import('./modules/core-component/core-component.module').then(
+        (module) => module.CoreComponentModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'core',
     pathMatch: 'full',

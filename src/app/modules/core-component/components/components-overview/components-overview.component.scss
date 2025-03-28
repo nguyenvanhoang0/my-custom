@@ -1,0 +1,6 @@
+.group-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột */
+  gap: 36px;
+  justify-content: space-between;
+}

@@ -156,9 +156,16 @@ export const MAIN_ROUTES: IRoute[] = [
   },
 
   {
-    title: 'todo',
+    title: 'Components',
     icon: 'bell',
-    route: 'todo',
+    route: 'components',
+    children: [
+      {
+        title: 'components overview',
+        icon: 'tag',
+        route: '/components/overview',
+      },
+    ],
   },
 ];
 
