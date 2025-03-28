@@ -19,13 +19,113 @@ export const MAIN_ROUTES: IRoute[] = [
             route: '/core/interceptors',
             children: [
               {
-                title: 'interceptors ',
+                title: 'interceptorssâsa',
                 icon: 'tag',
                 route: '/core/interceptors',
               },
             ],
           },
         ],
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
+      },
+      {
+        title: 'Guard ',
+        icon: 'tag',
+        route: '/core/guard',
+      },
+      {
+        title: 'Interceptors ',
+        icon: 'tag',
+        route: '/core/interceptors',
       },
       {
         title: 'Interceptors ',

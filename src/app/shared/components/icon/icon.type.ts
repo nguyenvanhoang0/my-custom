@@ -19,6 +19,7 @@ import {
   faArrowDown,
   faChevronRight,
   faCopy,
+  faBars,
 } from '@fortawesome/free-solid-svg-icons';
 export type IconName =
   | 'home'
@@ -39,7 +40,8 @@ export type IconName =
   | 'tag'
   | 'arrowDown'
   | 'copy'
-  | 'chevronRight';
+  | 'chevronRight'
+  | 'bars';
 
 export const ICONS: Record<IconName, IconDefinition> = {
   home: faHome,
@@ -61,4 +63,5 @@ export const ICONS: Record<IconName, IconDefinition> = {
   arrowDown: faArrowDown,
   chevronRight: faChevronRight,
   copy: faCopy,
+  bars: faBars,
 };

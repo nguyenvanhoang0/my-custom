@@ -20,14 +20,6 @@ export class HighlightTextComponent implements OnChanges {
 
     let formattedText = this.config.text;
 
-    this.config.links.forEach(({ word, url }) => {
-      const linkHtml = `<a href="${url}" target="_blank">${word}</a>`;
-      formattedText = formattedText.replace(
-        new RegExp(`\\b${word}\\b`, 'gi'),
-        linkHtml
-      );
-    });
-
     this.config.highlightWords.forEach(({ word, color }) => {
       if (Object.values(EHighlightColor).includes(color)) {
         const highlightHtml = `<span style="color: ${color}; font-weight: bold;">${word}</span>`;
@@ -36,6 +28,14 @@ export class HighlightTextComponent implements OnChanges {
           highlightHtml
         );
       }
+    });
+
+    this.config.links.forEach(({ word, url }) => {
+      const linkHtml = `<a href="${url}" target="_blank">${word}</a>`;
+      formattedText = formattedText.replace(
+        new RegExp(`\\b${word}\\b`, 'gi'),
+        linkHtml
+      );
     });
 
     this.highlightedText =

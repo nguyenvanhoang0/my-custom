@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
   standalone: false,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @Output() navBarOpened = new EventEmitter<void>();
+
+  handleClickIconMenu() {
+    this.navBarOpened.emit();
+  }
+}

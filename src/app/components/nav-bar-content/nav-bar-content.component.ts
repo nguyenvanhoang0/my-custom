@@ -18,9 +18,16 @@ import {
     trigger('expandCollapse', [
       state(
         'closed',
-        style({ clipPath: 'inset(0 0 100% 0)', opacity: 0, height: '0px' })
+        style({
+          clipPath: 'inset(0 0 100% 0)',
+          visibility: 'hidden',
+          height: '0px',
+        })
       ),
-      state('open', style({ clipPath: 'inset(0 0 0 0)', opacity: 1 })),
+      state(
+        'open',
+        style({ clipPath: 'inset(0 0 0 0)', visibility: 'visible' })
+      ),
       transition('closed <=> open', animate('200ms ease-in-out')),
     ]),
   ],

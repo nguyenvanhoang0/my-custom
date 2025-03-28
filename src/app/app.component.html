@@ -1,9 +1,11 @@
 <div>
   <header>
-    <app-header></app-header>
+    <app-header (navBarOpened)="onOpenNavBar()"></app-header>
   </header>
   <div class="body">
-    <nav><app-nav-bar></app-nav-bar></nav>
-    <div class="content"><router-outlet /></div>
+    <app-nav-bar [navBarOpened]="navBarOpened" class="nav-bar"></app-nav-bar>
+    <div class="content" [ngClass]="navBarOpened ? '' : 'nav-bar-closs'">
+      <router-outlet />
+    </div>
   </div>
 </div>

@@ -2,17 +2,18 @@
   margin-top: 40px;
   min-height: 40vh;
   height: 100%;
-
+  font-size: 14px;
   ul {
     li {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 12px 20px 12px 48px;
+      margin-top: 6px;
       cursor: pointer;
       position: relative;
       transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
-
+      width: 100%;
       &:hover,
       &.router-link-active {
         background: #cae9ff;
