@@ -44,6 +44,10 @@ ul {
   width: 100%;
 }
 
+.no-select {
+  user-select: none;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }

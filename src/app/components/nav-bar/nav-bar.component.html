@@ -1,3 +1,38 @@
-<nav class="nav-bar" [ngClass]="navBarOpened ? '' : 'close'">
-  <app-nav-bar-content></app-nav-bar-content>
-</nav>
+<ng-container>
+  <nav
+    class="main"
+    [ngClass]="{
+      left: isLeftSidebar,
+      right: !isLeftSidebar,
+      full: fullScreen,
+      close: !navBarOpened
+    }"
+  >
+    <div [style.width.px]="sidebarStyle.width">
+      <div class="sidebar-content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Thanh kéo thay đổi kích thước -->
+  <nav
+    [ngClass]="{
+      left: isLeftSidebar,
+      right: !isLeftSidebar,
+      full: fullScreen,
+      close: !navBarOpened
+    }"
+    class="resize"
+    [style.zIndex]="sidebarResizeStyle.zIndex"
+    [style.borderRight]="isLeftSidebar ? sidebarResizeStyle.border : 'none'"
+    [style.borderLeft]="isLeftSidebar ? 'none' : sidebarResizeStyle.border"
+    (mousemove)="onResize($event)"
+    (mousedown)="onResizeStart()"
+    (mouseup)="onResizeEnd($event)"
+  >
+    <div [style.width.px]="sidebarResizeStyle.width">
+      <div class="sidebar-content" (mousemove)="blocKonResize($event)"></div>
+    </div>
+  </nav>
+</ng-container>

@@ -1,11 +1,32 @@
 <div>
   <header>
-    <app-header (navBarOpened)="onOpenNavBar()"></app-header>
+    <app-header (navBarOpened)="toggleNavBar()"></app-header>
   </header>
   <div class="body">
-    <app-nav-bar [navBarOpened]="navBarOpened" class="nav-bar"></app-nav-bar>
-    <div class="content" [ngClass]="navBarOpened ? '' : 'nav-bar-closs'">
+    <div
+      class="content"
+      [ngClass]="navBarOpened ? '' : 'nav-bar-closs'"
+      [ngStyle]="{
+        'margin-left.px': leftSidebarWidth,
+        'margin-right.px': rightSidebarWidth
+      }"
+    >
       <router-outlet />
     </div>
   </div>
 </div>
+<app-nav-bar
+  [navBarOpened]="navBarOpened"
+  (sidebarWidth)="onSidebarResize($event)"
+  class="nav-bar"
+>
+  <app-nav-bar-content></app-nav-bar-content>
+</app-nav-bar>
+<app-nav-bar
+  [navBarOpened]="navBarOpened"
+  (sidebarWidth)="onSidebarResize($event)"
+  [isLeftSidebar]="false"
+  class="nav-bar"
+>
+  <app-nav-bar-content></app-nav-bar-content>
+</app-nav-bar>
