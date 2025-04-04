@@ -1,0 +1,21 @@
+<div
+  class="modal-overlay"
+  [class.show]="isOpen"
+  (click)="closeMethod === 'outside' && onOverlayClick()"
+>
+  <div
+    class="modal-content"
+    [ngClass]="location"
+    [class.show]="isOpen"
+    (click)="$event.stopPropagation()"
+  >
+    <button
+      *ngIf="closeMethod === 'button'"
+      class="close-btn"
+      (click)="closeModal()"
+    >
+      <app-icon [icon]="'close'"></app-icon>
+    </button>
+    <ng-content></ng-content>
+  </div>
+</div>

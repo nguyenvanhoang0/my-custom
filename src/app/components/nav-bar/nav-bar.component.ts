@@ -97,7 +97,7 @@ export class NavBarComponent implements OnChanges {
   }
 
   private updateSidebarStyles(clientX: number): void {
-    const minWidth = 200;
+    const minWidth = 250;
     const maxWidth = this.screenWidth * 0.4 - 10;
     const newWidth = Math.max(
       minWidth,

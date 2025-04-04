@@ -1,0 +1,38 @@
+<app-modal
+  [isOpen]="isModalOpen"
+  [closeMethod]="'outside'"
+  [location]="selectedLocation"
+  (closed)="onModalClosed()"
+>
+  Nội dung Modal
+  <select id="location" [(ngModel)]="selectedLocation">
+    <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+  </select>
+  <div class="group-card">
+    <app-card
+      *ngFor="let item of listContent"
+      [img]="item"
+      [title]="'hoang vip'"
+      [content]="'aaaaaa ssasas saskajsij jdvdv sdgvjv fhnusf sdgbf'"
+    ></app-card>
+  </div>
+</app-modal>
+
+<!-- <button (click)="toggleModal()">Mở/Đóng Modal</button> -->
+<app-my-button
+  (click)="toggleModal()"
+  type="default"
+  shape="soft"
+  [ghost]="true"
+  size="default"
+  [customColor]="'#ff4d4f'"
+>
+  Tải dữ liệu
+</app-my-button>
+
+<app-my-group-button [shape]="'soft'" [customColor]="'#ff4d4f'">
+  <app-my-button type="primary">OK</app-my-button>
+  <app-my-button type="default" [ghost]="true">Cancel</app-my-button>
+  <app-my-button type="dashed" [ghost]="true">Cancel</app-my-button>
+  <app-my-button type="default" [ghost]="true">Cancel</app-my-button>
+</app-my-group-button>

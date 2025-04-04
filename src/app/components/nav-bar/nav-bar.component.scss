@@ -1,9 +1,10 @@
-$sidebar-width-min: 200px;
+$sidebar-width-min: 250px;
 $sidebar-width-max: 40%;
 
 nav {
   height: 94vh;
   overflow-y: auto;
+  overflow-x: hidden;
   position: fixed;
   border-right: 1px solid #f0f0f0;
   transition: 0.6s;
@@ -38,7 +39,7 @@ nav {
 
   &.resize {
     position: absolute;
-    min-width: 200px;
+    min-width: $sidebar-width-min;
     cursor: ew-resize;
     z-index: 101;
     transition: 0s;

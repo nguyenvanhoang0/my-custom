@@ -1,0 +1,44 @@
+.group-container {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  /* Sử dụng ::ng-deep để áp dụng cho button con */
+  ::ng-deep app-my-button:not(:last-child) button {
+    border-right: none; /* Xóa border-right trừ button cuối */
+  }
+
+  /* Còn lại các kiểu bo góc */
+  button {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* 🔵 Định dạng bo góc */
+.shape-round {
+  border-radius: 20px;
+}
+.shape-soft {
+  border-radius: 4px;
+}
+.shape-none {
+  border-radius: 0;
+}
+
+/* ⬛ Full width */
+.block {
+  width: 100%;
+}
+
+/* 🌟 Tiền tố, hậu tố */
+[prefix],
+[suffix] {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+}

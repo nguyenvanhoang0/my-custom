@@ -1,0 +1,101 @@
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+/* 🎯 Kích thước */
+.size-large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+.size-small {
+  font-size: 12px;
+  padding: 4px 12px;
+}
+.size-default {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* 🔥 Kiểu button */
+.type-default {
+  background: #f0f0f0;
+  border: 1px solid #d9d9d9;
+  color: #000;
+}
+.type-primary {
+  background: #1677ff;
+  border: 1px solid #1677ff;
+  color: #fff;
+}
+.type-dashed {
+  background: transparent;
+  border: 1px dashed #d9d9d9;
+  color: #000;
+}
+.type-link {
+  background: transparent;
+  border: none;
+  color: #1677ff;
+  text-decoration: underline;
+}
+.type-text {
+  background: transparent;
+  border: none;
+  color: #000;
+}
+
+/* 🌀 Loading spinner */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🔷 Ghost (trong suốt, viền + chữ màu chính) */
+.ghost {
+  background: transparent !important;
+}
+
+/* ⬛ Full width */
+.block {
+  width: 100%;
+}
+
+/* 🔵 Định dạng bo góc */
+.shape-circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.shape-round {
+  border-radius: 20px;
+}
+
+.shape-soft {
+  border-radius: 4px;
+}
+.shape-none {
+  border-radius: 0;
+}
