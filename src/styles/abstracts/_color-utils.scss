@@ -1,0 +1,30 @@
+@function hexToRgba($color, $alpha: 1) {
+  // Nếu là kiểu color: dùng red(), green(), blue()
+  @if type-of($color) == "color" {
+    @return rgba(red($color), green($color), blue($color), $alpha);
+  }
+
+  $hex: unquote($color);
+  @if str-index($hex, "#") == 1 {
+    $hex: str-slice($hex, 2);
+  }
+
+  @if str-length($hex) == 3 {
+    $r: str-slice($hex, 1, 1);
+    $g: str-slice($hex, 2, 2);
+    $b: str-slice($hex, 3, 3);
+    $hex: "#{$r}#{$r}#{$g}#{$g}#{$b}#{$b}";
+  }
+
+  $r: str-slice($hex, 1, 2);
+  $g: str-slice($hex, 3, 4);
+  $b: str-slice($hex, 5, 6);
+
+  // Không dùng regex ở đây
+  @return rgba(
+    str-to-number("0x#{$r}"),
+    str-to-number("0x#{$g}"),
+    str-to-number("0x#{$b}"),
+    $alpha
+  );
+}

@@ -1,0 +1,30 @@
+$button-type-map: (
+  default: (
+    bg: #f0f0f0,
+    color: #000,
+    border: #d9d9d9,
+  ),
+  primary: (
+    bg: #1677ff,
+    color: #fff,
+    border: #1677ff,
+  ),
+  dashed: (
+    bg: transparent,
+    color: #000,
+    border: #d9d9d9,
+    style: dashed,
+  ),
+  text: (
+    bg: transparent,
+    color: #000,
+    border: transparent,
+    style: none,
+  ),
+  link: (
+    bg: transparent,
+    color: #1677ff,
+    border: transparent,
+    style: none,
+  ),
+);

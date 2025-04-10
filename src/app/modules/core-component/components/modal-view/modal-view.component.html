@@ -25,14 +25,16 @@
   shape="soft"
   [ghost]="true"
   size="default"
+  [block]="true"
   [customColor]="'#ff4d4f'"
 >
   Tải dữ liệu
 </app-my-button>
 
-<app-my-group-button [shape]="'soft'" [customColor]="'#ff4d4f'">
+<app-my-group-button [shape]="'round'">
   <app-my-button type="primary">OK</app-my-button>
   <app-my-button type="default" [ghost]="true">Cancel</app-my-button>
   <app-my-button type="dashed" [ghost]="true">Cancel</app-my-button>
-  <app-my-button type="default" [ghost]="true">Cancel</app-my-button>
+  <app-my-button type="link" [ghost]="true">Cancel</app-my-button>
+  <app-my-button type="text" [ghost]="true">Cancel</app-my-button>
 </app-my-group-button>
