@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { location } from './components/modal/modal.types';
+import { location } from '../../../../core/types/location.types';
 
 @Component({
   selector: 'app-modal-view',

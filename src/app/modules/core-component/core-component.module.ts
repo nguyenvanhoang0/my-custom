@@ -10,12 +10,15 @@ import { ModalComponent } from './components/modal-view/components/modal/modal.c
 import { ModalViewComponent } from './components/modal-view/modal-view.component';
 import { MyButtonComponent } from '../../shared/components/my-button/my-button.component';
 import { MyGroupButtonComponent } from '../../shared/components/my-group-button/my-group-button.component';
+import { MessageViewComponent } from './components/message-view/message-view.component';
+import { MessageComponent } from './components/message-view/components/message/message.component';
 
 @NgModule({
   declarations: [
     CoreComponentComponent,
     ComponentsOverviewComponent,
     ModalViewComponent,
+    MessageViewComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +28,7 @@ import { MyGroupButtonComponent } from '../../shared/components/my-group-button/
     ModalComponent,
     MyButtonComponent,
     MyGroupButtonComponent,
+    MessageComponent,
   ],
 })
 export class CoreComponentModule {}

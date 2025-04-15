@@ -1,0 +1,17 @@
+<!-- app-message-item.component.html -->
+<div class="message" [ngClass]="message.type">
+  <ng-container [ngSwitch]="message.type">
+    <span *ngSwitchCase="'loading'">
+      <span class="spinner"></span>
+      {{ message.content }}
+    </span>
+    <div *ngSwitchDefault class="message-content">
+      <app-icon
+        *ngIf="icon !== 'spinner' && icon"
+        [icon]="icon"
+        class="message-icon"
+      ></app-icon>
+      {{ message.content }}
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,13 @@
+<ng-container *ngFor="let pos of positions">
+  <div
+    class="message-container"
+    [ngClass]="pos"
+    *ngIf="groupedMessages[pos]?.length"
+  >
+    <app-message-item
+      *ngFor="let msg of groupedMessages[pos]"
+      [message]="msg"
+      (close)="onClose(msg.id)"
+    ></app-message-item>
+  </div>
+</ng-container>

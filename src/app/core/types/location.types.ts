@@ -8,3 +8,12 @@ export type location =
   | 'bottom-right'
   | 'bottom-left'
   | 'center';
+
+export type MessageLocation =
+  | 'top'
+  | 'bottom'
+  | 'top-right'
+  | 'top-left'
+  | 'bottom-right'
+  | 'bottom-left'
+  | 'center';

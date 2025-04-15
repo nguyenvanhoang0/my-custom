@@ -20,6 +20,9 @@ import {
   faChevronRight,
   faCopy,
   faBars,
+  faTriangleExclamation,
+  faSpinner,
+  faExclamation,
 } from '@fortawesome/free-solid-svg-icons';
 export type IconName =
   | 'home'
@@ -41,7 +44,10 @@ export type IconName =
   | 'arrowDown'
   | 'copy'
   | 'chevronRight'
-  | 'bars';
+  | 'bars'
+  | 'triangleExclamation'
+  | 'spinner'
+  | 'exclamation';
 
 export const ICONS: Record<IconName, IconDefinition> = {
   home: faHome,
@@ -64,4 +70,7 @@ export const ICONS: Record<IconName, IconDefinition> = {
   chevronRight: faChevronRight,
   copy: faCopy,
   bars: faBars,
+  triangleExclamation: faTriangleExclamation,
+  spinner: faSpinner,
+  exclamation: faExclamation,
 };

@@ -170,6 +170,11 @@ export const MAIN_ROUTES: IRoute[] = [
         icon: 'tag',
         route: '/components/modal',
       },
+      {
+        title: 'message',
+        icon: 'tag',
+        route: '/components/message',
+      },
     ],
   },
 ];

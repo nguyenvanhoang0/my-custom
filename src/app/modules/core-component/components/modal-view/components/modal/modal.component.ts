@@ -2,8 +2,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ModalService } from '../../services/modal.service';
 import { CommonModule } from '@angular/common';
-import { location } from './modal.types';
 import { IconComponent } from '../../../../../../shared/components/icon/icon.component';
+import { location } from '../../../../../../core/types/location.types';
 
 @Component({
   selector: 'app-modal',

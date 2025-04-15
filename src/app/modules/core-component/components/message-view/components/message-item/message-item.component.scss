@@ -1,0 +1,60 @@
+.message {
+  padding: 10px 16px;
+  border-radius: 4px;
+  background-color: white;
+  //   //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  animation: fadeIn 0.3s ease;
+
+  display: inline-block;
+  word-break: break-word;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.success {
+  color: #52c41a;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.3);
+}
+.error {
+  color: #ff4d4f;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+.info {
+  color: #1890ff;
+}
+.warning {
+  color: #faad14;
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+.loading {
+  color: #1890ff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-top-color: #1890ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconComponent } from './shared/components/icon/icon.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { MessageComponent } from './modules/core-component/components/message-view/components/message/message.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     FontAwesomeModule,
     HighlightModule,
     IconComponent,
+    MessageComponent,
   ],
   providers: [
     {
