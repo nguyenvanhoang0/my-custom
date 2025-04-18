@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-my-group-button',
-  imports: [CommonModule],
+  imports: [CommonModule, MyButtonComponent],
   templateUrl: './my-group-button.component.html',
   styleUrl: './my-group-button.component.scss',
 })
 export class MyGroupButtonComponent {
-  @Input() shape: 'round' | 'soft' | 'none' = 'soft'; // Hạn chế shape
+  @Input() shape: 'round' | 'soft' | 'none' = 'soft';
   @Input() size: 'large' | 'small' | 'default' = 'default';
   @Input() type?: 'default' | 'primary' | 'dashed' | 'link' | 'text';
   @Input() customColor?: string;
@@ -21,11 +21,10 @@ export class MyGroupButtonComponent {
     this.buttons.forEach((button) => {
       button.size = this.size;
 
-      // Hủy shape của button con và áp dụng shape của group
-      button.shape = 'none'; // Hủy hết shape của button con
+      button.shape = 'none';
 
-      // Cập nhật các thuộc tính còn lại nếu chưa có từ button con
       button.type = button.type || this.type || 'default';
+      button.block = this.block;
       button.customColor = this.customColor;
     });
   }

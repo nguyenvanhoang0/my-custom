@@ -4,5 +4,5 @@
   [disabled]="disabled || loading"
 >
   <span *ngIf="loading" class="spinner"></span>
-  <ng-content *ngIf="!loading"></ng-content>
+  <ng-content *ngIf="!loading">button</ng-content>
 </button>

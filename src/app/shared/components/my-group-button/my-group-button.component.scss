@@ -54,6 +54,13 @@
 
 .block {
   width: 100%;
+  ::ng-deep app-my-button {
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+  }
 }
 
 [prefix],

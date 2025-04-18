@@ -1,5 +1,10 @@
 <div [ngClass]="groupClass">
   <ng-content select="[prefix]"></ng-content>
-  <ng-content select="app-my-button"></ng-content>
+  <ng-content select="app-my-button"
+    ><app-my-button type="primary">OK</app-my-button>
+    <app-my-button type="default" [ghost]="true">Cancel</app-my-button>
+    <app-my-button type="dashed" [ghost]="true">Cancel</app-my-button>
+    <app-my-button type="link" [ghost]="true">Cancel</app-my-button></ng-content
+  >
   <ng-content select="[suffix]"></ng-content>
 </div>
